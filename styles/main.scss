@@ -6,14 +6,15 @@
 @import './base/normalize';
 @import './base/reset';
 
+@import './mixins/text-style';
 @import './mixins/responsive';
 @import './mixins/positions';
 @import './mixins/flexbox';
-@import './mixins/text-style';
 
 @import './modules/tags';
 @import './modules/avatars';
 @import './modules/star-ratings';
 @import './modules/prices';
+@import './modules/buttons';
 
 @import './layouts/grids';
