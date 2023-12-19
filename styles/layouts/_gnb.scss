@@ -45,6 +45,23 @@
         .gnb-icon-button {
           margin-right: 8px;
         }
+
+        .gnb-auth {
+          margin-left: 8px;
+
+          a {
+            @include text-style(14, $secondary);
+            font-weight: 700;
+
+            &:first-child {
+              margin-right: 12px;
+            }
+
+            &:hover {
+              color: $blue;
+            }
+          }
+        }
       }
     }
 
@@ -56,12 +73,11 @@
       position: static;
       margin-right: 32px;
       transform: none;
-    }
 
-    img {
-      height: 24px;
+      img {
+        height: 24px;
+      }
     }
-
     .btn-primary {
       width: 88px;
 

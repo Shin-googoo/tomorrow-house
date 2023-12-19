@@ -1,8 +1,8 @@
 .gnb-icon-button {
-  $dadge-size: 16px;
+  $badge-size: 16px;
 
-  position: relative;
   @include flexbox;
+  position: relative;
   width: 32px;
   height: 32px;
   font-size: 24px;
@@ -19,9 +19,11 @@
   }
 
   &.is-cart {
-    position: relative;
-    top: 1px;
-    right: 1px;
+    i {
+      position: relative;
+      top: 1px;
+      right: 1px;
+    }
   }
 
   &:active {
@@ -33,15 +35,16 @@
     top: 0;
     right: 0;
     display: block;
-    height: $dadge-size;
-    min-width: $dadge-size;
+    height: $badge-size;
+    min-width: $badge-size;
+    padding: 0 4px;
     font-size: 10px;
     line-height: 16px;
     letter-spacing: -0.01em;
     color: $white;
     text-align: center;
     background-color: $red;
-    border-radius: $dadge-size / 2;
+    border-radius: $badge-size / 2;
   }
 
   @include responsive(T) {
