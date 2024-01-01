@@ -6,12 +6,13 @@
   }
 
   &-list {
-    @include flexbox(start);
+    @include inline-flexbox(start);
+    position: relative;
+    left: -8px;
+    white-space: nowrap;
   }
 
   &-item {
-    flex-shrink: 0;
-
     &.is-active {
       a {
         color: $blue;
