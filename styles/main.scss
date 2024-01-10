@@ -1,7 +1,7 @@
 @import './constants/colors';
 @import './constants/typography';
 @import './constants/breakpoints';
-@import './constants/_box-shadows';
+@import './constants/box-shadows';
 @import './constants/z-indexes';
 @import './constants/dimensions';
 
@@ -31,6 +31,7 @@
 @import './components/drawer-menu';
 @import './components/search-history';
 @import './components/breadcrumb';
+@import './components/product.carousel';
 
 @import './layouts/grids';
 @import './layouts/gnb';
