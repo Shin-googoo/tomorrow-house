@@ -11,6 +11,8 @@
   }
 
   .thumbnail-item {
+    margin-right: 4px;
+
     &.tns-nav-active {
       button {
         border: 3px solid $blue;
