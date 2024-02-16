@@ -5,6 +5,10 @@
     height: 8px;
     margin: 0 -#{$grid-margin}; //TODO: grid constants로 빼기
     background-color: $border;
+
+    &-big {
+      height: 24px;
+    }
   }
 
   @include responsive(T) {
