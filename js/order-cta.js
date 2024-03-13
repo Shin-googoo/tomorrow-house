@@ -1,5 +1,5 @@
 const orderCta = document.querySelector('.order-cta')
-const [orderCtaBuyButton, orderCtaBookmarkButton] = orderCta.childern
+const [orderCtaBookmarkButton, orderCtaBuyButton] = orderCta.children
 //const orderCtaBuyButton = orderCta.childern[0]
 //const orderCtaBookmarkButton = orderCta.childern[1]
 
@@ -10,6 +10,7 @@ function openOrderModal() {
   orderModal.classList.add('is-open')
   orderModalOverlay.classList.add('is-active')
 }
+
 orderCtaBuyButton.addEventListener('click', openOrderModal)
 
 function closeOrderModal() {
@@ -18,3 +19,24 @@ function closeOrderModal() {
 }
 
 orderModalOverlay.addEventListener('click', closeOrderModal)
+
+function toggleOrderCtaBookmark() {
+  const [icon, countSpan] = this.children
+  const count = Number(countSpan.innerHTML.replaceAll(',', ''))
+
+  let newCount = count
+  if (this.classList.contains('is-active')) {
+    icon.classList.add('ic-bookmark')
+    icon.classList.remove('ic-bookmark-filled')
+    newCount = newCount - 1
+  } else {
+    icon.classList.add('ic-bookmark-filled')
+    icon.classList.remove('ic-bookmark')
+    newCount = newCount + 1
+  }
+
+  countSpan.innerHTML = newCount.toLocaleString()
+  this.classList.toggle('is-active')
+}
+
+orderCtaBookmarkButton.addEventListener('click', toggleOrderCtaBookmark)
